@@ -48,3 +48,40 @@ the closed-form solution is not practical and computationally intensive so we wi
 
 
 ![RSS in matrix nnotation](images/gradient_algorithm.PNG)
+
+________________________________
+## Assessing Fit (REG03-NB01)
+### This is an overview of what the notebook is about.  
+_____________________________
+
+After we have fitted models in the previous notebooks, now we need to assess how good our model is at fitting our data. the answer is we need to define a loss function such as absolute error, squared error, root mean square error...etc. after defining the appropriate loss function we need to assess the loss.   
+**Training error:**  
+which is the average loss on the training data. the following figure shows the relation between the training error and the model complexity.   
+![training error](images/train_error.PNG)    
+
+we can see that as the model complexity increases the training error decreases which makes sense, because when the complexity increases the model tries to fit the data as much as possible and when we go ahead and measure the error (on which the model trying to fit) it make sense that error decreases.  
+
+**Generalization (true) error:**  
+it's the average over all possible pairs(x,y) weighted by how likely each is i.e. all the data in the world.  
+
+![training error](images/true_error.PNG)   
+
+
+we can see that as the complexity increases the error drops at first and then goes up. it's not surprising that we can't compute the true error because we can't collect all the data in the world that is related to our problem. what we can do is an approximation of the true error.  
+
+**Test error:**   
+it's an approximation of the true error. and computed as the average loss on the test data.    
+
+**Overfitting:**   
+overfitting means that your model is doing very well on the data it has seen (training data) but doesn't generalize well on the data it has never seen (test data). we will learn how to deal with overfitting later. the following figure shows the relation between train, test, and true error also formulating the conditions that if it happened we have an overfitting problem.
+
+![training error](images/3errors.PNG)
+
+**3 sources of error:**    
+to be continued. 
+
+
+
+
+
+

@@ -34,7 +34,8 @@ _____________________________
 we discussed in the previous notebook above the simple linear regression, in this notebook we will discuss the multiple-linear regression. in multiple linear regression, we incorporate multiple inputs and a single output. our model will be a polynomial function.   
 ![multiple-regression model](images/Multi_model.PNG)  
 Now, we will use the same cost function we used in the case of simple regression (RSS). but first, we need to write it in matrix notation   
-![RSS in matrix nnotation](images/RSS_matrix.PNG) where **H** is the feature matrix and **W** is the coefficients vector. Just like simple regression we have two approaches:  
+![RSS in matrix nnotation](images/RSS_matrix.PNG)       
+where **H** is the feature matrix and **W** is the coefficients vector. Just like simple regression we have two approaches:  
 1. Analytically (Closed-form Solution).
 2. Gradient descent.   
 

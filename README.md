@@ -77,8 +77,42 @@ overfitting means that your model is doing very well on the data it has seen (tr
 
 ![training error](images/3errors.PNG)
 
-**3 sources of error:**    
-to be continued. 
+________________________________
+## Regularization (REG04-NB01 - REG04-NB02)
+### This is an overview of what the notebook is about.  
+_____________________________
+
+Now that we know what is overfitting and what conditions need to be fulfilled to say that the model is overfitting. another symptom is that the model coefficients become very large. the issue of overfitting with respect to increasing model complexity is relative to how much data we have.  
+- if the # data points are small the model rapidly overfits as the complexity increases.
+- if the # data points are large the model is hard to overfit as the complexity increases.
+
+the solution to this problem is using regularization. we will add a term to cost-of-fit to prefer small coefficients. what we want to do is balance between:  
+- How will the function fits data
+- Magnitude of coefficients   
+
+So, now our total cost becomes the following:   
+
+
+![training error](images/total_cost.PNG)   
+
+we already know the measure of fit which is **RSS**, now what is the summary number that is indicative of the size of the coefficients?  
+it turns out that it's the sum of squares (L2 norm). so now our total cost becomes the following 
+
+
+![training error](images/total_cost_complete.PNG) 
+
+we use **lambda** to balance between the fit of the model and the size of the magnitude of the coefficients, let us examine the extreme cases of **lambda**:   
+- if **lambda** = 0 ----> then we are back with our old solution regression without regularization.
+- if **lambda** = infinity ----> the coefficients will reduce to zero which indicates the simplest model there is (no model just noise).   
+now we will alter the gradient descent algorithm to account for regression. the new algorithm will be as the following images show.
+
+![training error](images/gradient_regulirized.PNG)    
+
+the difference between this algorithm and the previous version is that we are always shrinking the coefficients before updating the coefficients, which insure that coefficients don't get very large.
+
+
+
+
 
 
 
